@@ -6,7 +6,7 @@ interface Props {
 }
 function Button(props: Props) {
   const { label, type } = props;
-  return <button className={`btn ${type}`}>{label}</button>;
+  return <button className={`btn ${type}`} >{label}</button>;
 }
 
 export default Button;

@@ -1,0 +1,33 @@
+.App {
+  text-align: center;
+  font-size: 2rem;
+  padding: 15px 32px;
+}
+
+.number {
+  color: rgb(10, 39, 29);
+}
+
+.subtractButton {
+  margin-right: 30%;
+  background-color: #f50505;
+  cursor: pointer;
+}
+
+.addButton {
+  background-color: #65f803d5;
+  cursor: pointer;
+}
+
+.resetButton {
+  cursor: pointer;
+}
+
+.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.resetButton:hover {
+  background-color: rgb(156, 154, 154);
+}
