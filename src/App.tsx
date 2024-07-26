@@ -3,6 +3,8 @@ import "./components/buttons/accordian/accordian.css";
 import Button from "./components/buttons/Button";
 import Accordian from "./components/buttons/accordian/Accordian";
 import Counter from "./components/counter/Counter";
+import Dropdown from "./components/dropdown/Dropdown";
+import _ from "lodash"
 
 const data = [
   {
@@ -22,6 +24,17 @@ const data = [
   },
 ];
 
+const options = [
+  { label: "Arun" },
+  { label: "Yuvaraj" },
+  { label: "Ragul" },
+  { label: "Tamil" },
+  { label: "Subha" },
+  { label: "Femi" },
+  { label: "Vasanth" },
+  { label: "Gopi" },
+];
+
 const App = () => {
   return (
     <div>
@@ -29,11 +42,14 @@ const App = () => {
       <Button label="Secondary" type="secondary" />
       <Button label="Inverted" type="inverted" />
       <div className="border">
-      {data.map((element) => (
-        <Accordian title={element.title} content={element.content} />
-      ))}
+      {_.map(data,(element)=>
+        <Accordian title={element.title} content={element.content}/>
+        )}
       </div>
-      <Counter/>
+      <Counter />
+      <div>
+        <Dropdown options={options} defaultValue="Friends" />
+      </div>
     </div>
   );
 };
